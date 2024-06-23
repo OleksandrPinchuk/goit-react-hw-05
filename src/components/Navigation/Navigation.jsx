@@ -1,11 +1,12 @@
 import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
+const Navigation = () => {
     return (
         <nav>
             <NavLink to='/'>Home</NavLink>
+            <NavLink to='/movies'>Movies</NavLink>
         </nav>
     )
 }
 
-export default Navbar
+export default Navigation
