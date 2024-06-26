@@ -13,7 +13,6 @@ const MovieDetailsPage = () => {
     const backLinkHref = location.state ?? '/movies';
     const baseImgUrl = 'https://image.tmdb.org/t/p/w500/';
 
-
     useEffect(() => {
         const getData = async () => {
             try {
@@ -31,9 +30,11 @@ const MovieDetailsPage = () => {
         getData()
     }, [movieId])
     
-        return (
+    return (
             <div>
                 <Link to={backLinkHref}>Back</Link>
+                {isLoading && <p>loading...</p>}
+                {error && <p>error</p>}
                 {movie && (
                     <div>
                         <h2>{movie.title}</h2>

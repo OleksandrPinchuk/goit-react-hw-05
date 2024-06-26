@@ -21,6 +21,16 @@ export const getSingleMovie = async (movieId) => {
         }
     })
     return data
+};
+
+export const getSearchedFilm = async (query) => {
+    const { data } = await axios.get((`search/movie?query=${query}&include_adult=false&language=en-US&page=1`, {
+        headers: {
+            accept: 'application/json',
+            Authorization: `Bearer ${access_token}`,
+        }
+    }))
+    return data
 }
 
 
