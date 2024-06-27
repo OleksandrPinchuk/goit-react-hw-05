@@ -1,0 +1,14 @@
+.navigation {
+    margin-left: 20px;
+    font-size: 24px;
+}
+
+.box {
+    border-radius: 4px;
+    box-shadow: black 0px 8px 10px -6px;
+    padding: 12px 24px;
+}
+
+.link {
+    margin-left: 20px;
+}

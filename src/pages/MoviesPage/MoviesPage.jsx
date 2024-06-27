@@ -2,6 +2,7 @@ import { useSearchParams } from 'react-router-dom';
 import { getSearchedFilm } from '../../api/movie-api.js';
 import { useState, useEffect } from 'react';
 import MovieList from '../../components/MovieList/MovieList.jsx';
+import css from './MoviesPage.module.css';
 
 
 const MoviesPage = () => {
@@ -44,9 +45,9 @@ const MoviesPage = () => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
-                <input type="text" name="query" value={inputValue} onChange={handleChange} />
-                <button type="submit">Search</button>
+            <form onSubmit={handleSubmit} className={css.form}>
+                <input type="text" name="query" value={inputValue} placeholder='Search movies' onChange={handleChange} className={css.input} />
+                <button type="submit" className={css.button}>Search</button>
             </form>
             {isLoading && <p>loading...</p>}
             {error && <p>error</p>}
