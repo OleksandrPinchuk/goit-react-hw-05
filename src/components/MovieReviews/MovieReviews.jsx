@@ -34,5 +34,4 @@ const MovieReviews = () => {
         </div>
     )
 }
-
 export default MovieReviews

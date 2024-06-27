@@ -7,10 +7,7 @@ const MovieList = ({ movies }) => {
                     <li key={movie.id}>
                         <Link to={String(`/movies/${movie.id}`)} state={location}>{movie.title}</Link>
                     </li>
-                ))
-            }
-        </ul>
-    )
+                ))}
+        </ul>)
 }
-
 export default MovieList

@@ -10,7 +10,6 @@ const MovieCast = lazy(() => import('./components/MovieCast/MovieCast'));
 const MovieReviews = lazy(() => import('./components/MovieReviews/MovieReviews'));
 
 function App() {
-
   return (
     <>
       <Navigation />
@@ -28,5 +27,4 @@ function App() {
     </>
   )
 }
-
 export default App

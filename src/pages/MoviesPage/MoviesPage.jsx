@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import MovieList from '../../components/MovieList/MovieList.jsx';
 import css from './MoviesPage.module.css';
 
-
 const MoviesPage = () => {
 
     const [params, setParams] = useSearchParams();
@@ -21,7 +20,6 @@ const MoviesPage = () => {
                     setIsLoading(true);
                     const data = await getSearchedFilm(query);
                     setMovies(data);
-                    console.log(data)
                 } catch (error) {
                     console.log('error')
                     setError(true);
