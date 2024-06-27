@@ -1,7 +1,7 @@
 
 const NotFoundPage = () => {
     return (
-        <div>NotFoundPage</div>
+        <div>We don`t have any reviews for this movie</div>
     )
 }
 

@@ -31,6 +31,25 @@ export const getSearchedFilm = async (query) => {
         }
     })
     return data.results
-}
+};
 
+export const getCast = async (movieId) => {
+    const { data } = await axios.get(`movie/${movieId}/credits`, {
+        headers: {
+            accept: 'application/json',
+            Authorization: `Bearer ${access_token}`,
+        }
+    })
+    return data.cast
+};
+
+export const getReviews = async (movieId) => {
+    const { data } = await axios.get(`movie/${movieId}/reviews?language=en-US&page=1`, {
+        headers: {
+            accept: 'application/json',
+            Authorization: `Bearer ${access_token}`,
+        }
+    })
+    return data.results
+};
 
